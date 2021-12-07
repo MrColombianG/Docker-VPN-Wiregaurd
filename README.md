@@ -88,7 +88,7 @@ Before saving the file there are a few changes that need to be made:
   - Change the TZ (timezone) to a a time zone that is applicable to you
   - Change the SERVERURL to the ip address that you had earlier
   - Change the PEERS to different devices or users that would be using this VPN server
-Now you can save the file by pressing esc and run the following command to view your file to see if the edits made it's change
+  - Now you can save the file by pressing esc and run the following command to view your file to see if the edits made it's change
 
     cat ~/wireguard/docker-compose.yml
 
@@ -100,6 +100,29 @@ Use the following command to check to see if there is a wireguard directory and 
     docker-compose up -d
 
 After this you can now use digital ocean to create a droplet and connect it to your wiregaurd by copying the private key into the interface and this should allow you to start your wireguard VPN server.
+
+## How to connect your phone to Wireguard VPN Server
+
+- Step 1: Run this command
+        docker-compose logs -f wireguard
+- Step 2: Downlaod Wireguard app and open up on your phone
+- Step 3: Click the + button and choose "Create from QR code" 
+- Step 4: Scan the QR code in the terminal and chose the option designated for your phone
+
+## How to connect your laptop to Wireguard VPN Server
+
+- Step 1: Run this command
+        cd ~/wiregaurd/config
+- Step 2: Find the files with 'ls' and decide the PEER option needed for your device
+- Step 3: Change the directories toe the PEER option selected
+- Step 4: To see if the command is configured with the file then type this command
+        ls
+        cat peer_pc1.conf
+        
+- Step 5: Open up your Wireguard application and add an empty tunnel to connect the VM file location to the wireguard application outside the VM
+- Step 6: Copy and paste the information from the conf file selected into the new tunnel, then click save
+
+This is the end of the installation and now you may be using Wireguard VPN server for your devices. 
 
 
 
