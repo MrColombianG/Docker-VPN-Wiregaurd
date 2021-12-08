@@ -122,7 +122,10 @@ After this you can now use digital ocean to create a droplet and connect it to y
 - Step 5: Open up your Wireguard application and add an empty tunnel to connect the VM file location to the wireguard application outside the VM
 - Step 6: Copy and paste the information from the conf file selected into the new tunnel, then click save
 
-This is the end of the installation and now you may be using Wireguard VPN server for your devices. 
+This is the end of the installation and now you may be using Wireguard VPN server for your devices.
+
+        The proof of completion is above in 2 seperate files. 
+        
 
 
 
